@@ -41,6 +41,9 @@ stage('will old fail in node'){
 
 stage('in node'){
 	node{
+		if (BUILD_NUMBER % 2 == 0) {
+			error("fail here")
+		}
 		milestone 6
 	}
 }
