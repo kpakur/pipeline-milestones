@@ -12,6 +12,14 @@ stage('will old fail'){
 	input message: 'will old fail all red or jus one step red?'
 }
 
+stage('sleep 30 seconds'){
+	sleep(time:30,unit:"SECONDS")
+}
+
+stage('sleep 60 seconds'){
+	sleep(time:60,unit:"SECONDS")
+}
+
 milestone 2
 
 stage('will old fail'){
@@ -66,4 +74,8 @@ stage('in node'){
 	node{
 		milestone 8
 	}
+}
+
+stage('sleep 600 seconds'){
+	sleep(time:600,unit:"SECONDS")
 }
